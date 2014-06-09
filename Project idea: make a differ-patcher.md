@@ -10,10 +10,8 @@ A diff file has the following structure:
 
  1. A **header** of two lines, giving the names of the two original text files and indicating which is considered the "original" file from which the other is being derived. The original file is called the "from-file" and is marked with minus signs; the "to-file" is marked with plus-signs:
 
-        ```
---- from-file
-+++ to-file
-        ```
+        --- from-file
+        +++ to-file
 
  1. A series of **hunks** of differences between the files. Each hunk has two parts:
    2. It begins with a line beginning and ending with a pair of at-signs (`@@`), between which are listed the numbers of the lines in each file described by the hunk and the number of consecutive changes. 
