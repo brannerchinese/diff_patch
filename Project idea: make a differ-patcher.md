@@ -24,6 +24,7 @@ Build a tool to compare two text files and generate a diff — a file that conci
         ```
 
        This hunk says: The single line at line 3 of the from-file is being removed and a single new line is being added to the to-file. The line being removed is "some text" and the line being added is "other words".
+
      3. Hunks can also include lines of **context**, for the benefit of human readers. Context lines always begin with a space. They are found in both the from-file and the to-file, and strictly speaking they are not part of the diff. 
 
      In this hunk
