@@ -27,18 +27,18 @@ Build a tool to compare two text files and generate a diff — a file that conci
 
      3. Hunks can also include lines of **context**, for the benefit of human readers. Context lines always begin with a space. They are found in both the from-file and the to-file, and strictly speaking they are not part of the diff. 
 
-     In this hunk
+   In this hunk
 
         ```
 @@ -2,0 +3 @@
 +some words
         ```
 
-     the expression `-2,0 +3` means that line 2 in the from-file corresponds to line 3 in the to-file, and nothing is removed from the from-file at the position specified, but one line is added in the to-file at the position specified. The default change is one line — to be removed, if specified for the from-file; added, if specified for the to-file. 
+   the expression `-2,0 +3` means that line 2 in the from-file corresponds to line 3 in the to-file, and nothing is removed from the from-file at the position specified, but one line is added in the to-file at the position specified. The default change is one line — to be removed, if specified for the from-file; added, if specified for the to-file. 
 
-     If the change is of something other than the default, it is specified after the number, with a comma before it. so `-2,0` above means "We are dealing with position line 2 in the from-file, but there are zero changes". 
+   If the change is of something other than the default, it is specified after the number, with a comma before it. so `-2,0` above means "We are dealing with position line 2 in the from-file, but there are zero changes". 
 
-       But a hunk like this:
+   But a hunk like this:
 
         ```
 @@ -24,3 +25 @@
@@ -48,7 +48,7 @@ Build a tool to compare two text files and generate a diff — a file that conci
 +The flavor of limited-release Japanese soda Pepsi Baobab was described as "liberating" by PepsiCo. (https://en.wikipedia.org/wiki/Adansonia#Food_uses, accessed 20140608)
         ```
 
-       means "At line 24 of the from-file, remove three lines so that they do not appear at line 25 of the to-file; instead, at line 25 of the to-file, add one line." And the three lines to be removed are specified, as is the one line to be added.
+   means "At line 24 of the from-file, remove three lines so that they do not appear at line 25 of the to-file; instead, at line 25 of the to-file, add one line." And the three lines to be removed are specified, as is the one line to be added.
        
 ### Other ideas
 
@@ -61,7 +61,6 @@ Build a tool to compare two text files and generate a diff — a file that conci
  1. The Python documentation for [`difflib`](https://docs.python.org/3/library/difflib.html).
  1. Google [`diff-match-patch`](https://code.google.com/p/google-diff-match-patch/), available in a number of languages.
  1. The C++ diff templating library [`dtl-cpp`](https://code.google.com/p/dtl-cpp/); [tutorial](https://code.google.com/p/dtl-cpp/wiki/Tutorial) also available.
- 1. 
 
 [end]
 
