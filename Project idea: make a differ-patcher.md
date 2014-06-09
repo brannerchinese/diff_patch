@@ -44,13 +44,13 @@ the expression `-2,0 +3` means that line 2 in the from-file corresponds to line 
 
 But a hunk like this:
 
-        ```
+```
 @@ -24,3 +25 @@
 -Extra line to be removed.
 -Extra line to be removed.
 -Extra line to be removed.
 +The flavor of limited-release Japanese soda Pepsi Baobab was described as "liberating" by PepsiCo. (https://en.wikipedia.org/wiki/Adansonia#Food_uses, accessed 20140608)
-        ```
+```
 
 means "At line 24 of the from-file, remove three lines so that they do not appear at line 25 of the to-file; instead, at line 25 of the to-file, add one line." And the three lines to be removed are specified, as is the one line to be added.
        
