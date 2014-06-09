@@ -9,10 +9,10 @@ Build a tool to compare two text files and generate a diff — a file that conci
    2. A **header** of two lines, giving the names of the two original text files and indicating which is considered the "original" file from which the other is being derived. The original file is called the "from-file" and is marked with minus signs; the "to-file" is marked with plus-signs:
 
         --- from-file
-        +++ to-file 
+        +++ to-file
 
    2. A series of **hunks** of differences between the files. Each hunk has two parts:
-     3. It begins with a line beginning and ending with a pair of at-signs (`@`), between which are listed the numbers of the lines in each file described by the hunk and the number of consecutive changes. 
+     3. It begins with a line beginning and ending with a pair of at-signs (`@@`), between which are listed the numbers of the lines in each file described by the hunk and the number of consecutive changes. 
      3. After that there is a list of whole lines, each of which prefaced with a plus or a minus to indicate whether it is being added to the to-file or removed from it. Here is an example of a hunk:
 
         @@ -3 +3 @@
