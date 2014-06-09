@@ -4,6 +4,8 @@
 
 Build a tool to compare two text files and generate a diff — a file that concisely specifies the differences between the two other files.
 
+### What a diff file looks like
+
 A diff file has the following structure:
 
  1. A **header** of two lines, giving the names of the two original text files and indicating which is considered the "original" file from which the other is being derived. The original file is called the "from-file" and is marked with minus signs; the "to-file" is marked with plus-signs:
@@ -26,6 +28,8 @@ A diff file has the following structure:
      This hunk says: The single line at line 3 of the from-file is being removed and a single new line is being added to the to-file. The line being removed is "some text" and the line being added is "other words".
 
    2. Hunks can also include lines of **context**, for the benefit of human readers. Context lines always begin with a space. They are found in both the from-file and the to-file, and strictly speaking they are not part of the diff. 
+
+### More detail about format
 
 In this hunk
 
