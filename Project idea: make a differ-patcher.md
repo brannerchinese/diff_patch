@@ -15,9 +15,12 @@ Build a tool to compare two text files and generate a diff — a file that conci
      3. It begins with a line beginning and ending with a pair of at-signs (`@@`), between which are listed the numbers of the lines in each file described by the hunk and the number of consecutive changes. 
      3. After that there is a list of whole lines, each of which prefaced with a plus or a minus to indicate whether it is being added to the to-file or removed from it. Here is an example of a hunk:
 
-        @@ -3 +3 @@
-        -some text
-        +other words
+
+        ```
+@@ -3 +3 @@
+-some text
++other words
+```
 
        This hunk says: The single line at line 3 of the from-file is being removed and a single new line is being added to the to-file. The line being removed is "some text" and the line being added is "other words".
      3. Hunks can also include lines of **context**, for the benefit of human readers. Context lines always begin with a space. They are found in both the from-file and the to-file, and strictly speaking they are not part of the diff.
