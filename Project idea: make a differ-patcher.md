@@ -23,18 +23,20 @@ A diff file has the following structure:
 +other words
         ```
 
-     This hunk says: The single line at line 3 of the from-file is being removed and a single new line is being added to the to-file. The line being removed is "some text" and the line being added is "other words".
+     This hunk says: "The single line at line 3 of the from-file is being removed and a single new line is being added to the to-file." The line being removed is "some text" and the line being added is "other words".
 
-   2. Hunks can also include lines of **context**, for the benefit of human readers. Context lines always begin with a space. They are found in both the from-file and the to-file, and strictly speaking they are not part of the diff. Here is a hunk containing two context lines — one before and one after the changed lines:
+   2. Hunks can also include lines of **context**, for the benefit of human readers. Context lines always begin with a space. They are found in both the from-file and the to-file, and strictly speaking they may be redundant to analysing the diff. Here is a hunk containing two context lines — one before and one after the changed lines:
 
         ```
-    @@ -2,3 +2,3 @@
+    @@ -1,4 +1,3 @@
  line one
 -line two
 -line three
 +第二、三行合併
  line four
         ```
+
+     This hunk says: "Beginning at line 1 of from-file we are displaying four affected lines, and beginning at line 1 of to-file we are displaying three affected lines." But note that not all the lines displayed actually have changes.
 
 ### More detail about format
 
