@@ -11,7 +11,7 @@ Build a tool to compare two text files and generate a diff — a file that conci
         ```
 --- from-file
 +++ to-file
-```
+        ```
 
    2. A series of **hunks** of differences between the files. Each hunk has two parts:
      3. It begins with a line beginning and ending with a pair of at-signs (`@@`), between which are listed the numbers of the lines in each file described by the hunk and the number of consecutive changes. 
