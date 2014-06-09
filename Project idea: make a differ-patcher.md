@@ -14,7 +14,7 @@ A diff file has the following structure:
         +++ to-file
 
  1. A series of **hunks** of differences between the files. Each hunk has two parts:
-   2. It begins with a line beginning and ending with a pair of at-signs (`@@`), between which are listed the numbers of the lines in each file described by the hunk and the number of consecutive changes. 
+   2. It begins with a line beginning and ending with a pair of at-signs (`@@`), between which are listed the numbers of the lines in each file described by the hunk and the number of consecutive changes. Lines are numbered from 1, not 0.
    2. After that there is a list of whole lines, each of which prefaced with a plus or a minus to indicate whether it is being added to the to-file or removed from it. Here is an example of a hunk:
 
         ```
@@ -25,7 +25,16 @@ A diff file has the following structure:
 
      This hunk says: The single line at line 3 of the from-file is being removed and a single new line is being added to the to-file. The line being removed is "some text" and the line being added is "other words".
 
-   2. Hunks can also include lines of **context**, for the benefit of human readers. Context lines always begin with a space. They are found in both the from-file and the to-file, and strictly speaking they are not part of the diff. 
+   2. Hunks can also include lines of **context**, for the benefit of human readers. Context lines always begin with a space. They are found in both the from-file and the to-file, and strictly speaking they are not part of the diff. Here is a hunk containing two context lines — one before and one after the changed lines:
+
+        ```
+    @@ -2,3 +2,3 @@
+ line one
+-line two
+-line three
++第二、三行合併
+ line four
+        ```
 
 ### More detail about format
 
