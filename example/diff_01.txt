@@ -1,0 +1,4 @@
+--- test_from.txt
++++ test_to_01.txt
+@@ -3 +2,0 @@
+-line three
