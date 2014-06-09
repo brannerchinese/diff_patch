@@ -33,10 +33,10 @@ A diff file has the following structure:
 
 In this hunk
 
-        ```
+```
 @@ -2,0 +3 @@
 +some words
-        ```
+```
 
 the expression `-2,0 +3` means that line 2 in the from-file corresponds to line 3 in the to-file, and nothing is removed from the from-file at the position specified, but one line is added in the to-file at the position specified. The default change is one line — to be removed, if specified for the from-file; added, if specified for the to-file. 
 
